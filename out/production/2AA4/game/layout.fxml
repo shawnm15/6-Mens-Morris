@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Sets the layout of the game board
+
+Author: Victor Velechovsky
+Version: 1.0
+-->
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.GameController">
+    <children>
+        <Pane fx:id="surfacePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+
+                <!-- LINES -->
+
+                <Line endX="10" endY="490" startX="10" startY="10" />
+                <Line endX="490" endY="10" startX="10" startY="10" />
+                <Line endX="490" endY="490" startX="490" startY="10" />
+                <Line endX="490" endY="490" startX="10" startY="490" />
+                <Line endX="130" endY="350" startX="130" startY="130" />
+                <Line endX="350" endY="130" startX="130" startY="130" />
+                <Line endX="350" endY="350" startX="350" startY="130" />
+                <Line endX="350" endY="350" startX="130" startY="350" />
+                <Line endX="130" endY="240" startX="10" startY="240" />
+                <Line endX="240" endY="130" startX="240" startY="10" />
+                <Line endX="490" endY="240" startX="350" startY="240" />
+                <Line endX="240" endY="490" startX="240" startY="350" />
+
+                <!-- CIRCLES -->
+
+                <Button fx:id="circle1" layoutX="0" layoutY="0" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle2" layoutX="230" layoutY="0" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle3" layoutX="480" layoutY="0" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle4" layoutX="120" layoutY="120" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle5" layoutX="230" layoutY="120" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle6" layoutX="340" layoutY="120" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle7" layoutX="0" layoutY="230" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle8" layoutX="120" layoutY="230" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle9" layoutX="340" layoutY="230" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle10" layoutX="480" layoutY="230" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle11" layoutX="120" layoutY="340" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle12" layoutX="230" layoutY="340" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle13" layoutX="340" layoutY="340" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle14" layoutX="0" layoutY="480" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle15" layoutX="230" layoutY="480" mnemonicParsing="false" onAction="#circlePressed" text="" />
+                <Button fx:id="circle16" layoutX="480" layoutY="480" mnemonicParsing="false" onAction="#circlePressed" text="" />
+
+            </children>
+        </Pane>
+      <Pane prefHeight="50.0" prefWidth="500.0" />
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+
+                <!-- CONTROL BUTTONS -->
+
+                <Button fx:id="controlButton" mnemonicParsing="false" onAction="#controlButtonPressed" text="Button" />
+                <Pane prefHeight="100.0" prefWidth="10.0"/>
+                <Button fx:id="redButton" mnemonicParsing="false" onAction="#onRedToggleClicked" text="Red" />
+                <Pane prefHeight="100.0" prefWidth="50.0" />
+                <Button fx:id="blueButton" mnemonicParsing="false" onAction="#onBlueToggleClicked" text="Blue" />
+                <Pane prefHeight="100.0" prefWidth="50.0" />
+                <Button fx:id="storeGameButton" mnemonicParsing="false" onAction="#onStoreGameButtonPressed" text="Save Game" />
+                <Pane prefHeight="100.0" prefWidth="50.0" />
+
+            </children>
+        </HBox>
+      <TextField editable="false" fx:id="statusBox" text="Game in progress" />
+
+    </children>
+</VBox>

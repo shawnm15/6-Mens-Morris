@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Sets the layout of the intro screen
+
+Author: Victor Velechovsky
+Version: 1.0
+-->
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="100.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.GameController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="46.0" prefWidth="239.0">
+            <children>
+                <Button fx:id="newGameButton" mnemonicParsing="false" onAction="#handleNewGameButtonPressed" text="New Game" />
+            </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="2600.0">
+            <children>
+                <Button fx:id="resumeGameButton" mnemonicParsing="false" onAction="#handleResumeGameButtonPressed" text="Setup" />
+                <Button fx:id="resumeFromFileButton" layoutX="125.0" mnemonicParsing="false" onAction="#handleResumeFromFileButtonPressed" text="Resume from File" />
+            </children></AnchorPane>
+    </items>
+</SplitPane>

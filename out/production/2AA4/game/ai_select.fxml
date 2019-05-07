@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Sets the layout of the game board
+
+Author: Victor Velechovsky
+Version: 1.0
+-->
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.GameController">
+    <children>
+        <Button mnemonicParsing="false" text="Player vs. Player" fx:id="pvpButton" onAction="#pvpButtonClicked" />
+        <Button mnemonicParsing="false" text="Player vs. Computer" fx:id="pvcButton" onAction="#pvcButtonClicked" />
+    </children>
+</VBox>
